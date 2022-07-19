@@ -1,4 +1,7 @@
+from gettext import install
 from tkinter import *
+
+import pip
 from pandastable import Table
 
 root = Tk()
@@ -12,3 +15,5 @@ table = Table(frame)
 table.show()
 
 root.mainloop
+
+
