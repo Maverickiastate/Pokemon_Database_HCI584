@@ -1,2 +1,2 @@
-# Pokemon_Database_HCI584
-Project application for HCI 584
+# Pokemon_DataScience_HCI584
+
