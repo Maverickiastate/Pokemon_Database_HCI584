@@ -1,2 +1,2 @@
-# Pokemon_DataScience_HCI584
+# Pokemon DataScience project for HCI584
 
