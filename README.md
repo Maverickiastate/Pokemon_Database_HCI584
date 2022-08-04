@@ -11,7 +11,7 @@
     display(final_fast[['name', 'type_1', 'type_2','speed']])
     display(final_fast.iloc[0])
 
-![image](./images/Fast_fire_sorted.PNG)
+![image](images/Fast_fire_sorted.PNG)
 ![image](images/Fast_fire_winner.PNG)
 
 #### Second user case scenario: Finding the pokemon with the best defenseive stats (must be a normal status pokemon)
