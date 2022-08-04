@@ -11,8 +11,8 @@
     display(final_fast[['name', 'type_1', 'type_2','speed']])
     display(final_fast.iloc[0])
 
-![image](images\Fast_fire_sorted.PNG)
-![image](images\Fast_fire_winner.PNG)
+![image](./images/Fast_fire_sorted.PNG)
+![image](images/Fast_fire_winner.PNG)
 
 #### Second user case scenario: Finding the pokemon with the best defenseive stats (must be a normal status pokemon)
 #### This scenario follows along a similar structure to the first example but here a new column is being created. In this scenario maybe you want to find the Pokemon with the highest collective defensive stats. You add the columns together and create a new one. The process afterwards, again, is similar to the mechanics of the first example.
