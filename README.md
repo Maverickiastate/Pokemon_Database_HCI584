@@ -10,8 +10,9 @@
     final_fast = most_fast.sort_values(by="speed", ascending=False)
     display(final_fast[['name', 'type_1', 'type_2','speed']])
     display(final_fast.iloc[0])
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\Fast_fire_sorted.PNG)
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\Fast_fire_winner.PNG)
+
+![image](images\Fast_fire_sorted.PNG)
+![image](images\Fast_fire_winner.PNG)
 
 #### Second user case scenario: Finding the pokemon with the best defenseive stats (must be a normal status pokemon)
 #### This scenario follows along a similar structure to the first example but here a new column is being created. In this scenario maybe you want to find the Pokemon with the highest collective defensive stats. You add the columns together and create a new one. The process afterwards, again, is similar to the mechanics of the first example.
@@ -20,8 +21,9 @@
     total_def = normal_status.sort_values(by="total_defense", ascending=False)
     display(total_def[['pokedex_number','name', 'total_defense', 'hp', 'defense', 'sp_defense']].head(20))
     display(total_def.iloc[0])
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\Total_defense_sorted.PNG)
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\Total_defense_winner.PNG)
+
+![image](images\Total_defense_sorted.PNG)
+![image](images\Total_defense_winner.PNG)
 
 #### Third user case scenario: Using a move dictionary to find pokemon based off move data.
 #### Example 1: This function returns true/false when you search for a pokemon with moves you would like it to know. For example you could search that Gloom knows Charm, Flash, Snore and it would return True
@@ -40,7 +42,8 @@
     print(check_pokemon_moves("Pokemokee", ["charm", "flash", "snore"], move_dict)) # None
     print(check_pokemon_moves("Gloom", ["charm", "flash", "snore"], move_dict)) # True
     print(check_pokemon_moves("Gloom", ["charm", "flash", "frizzle-frazzle"], move_dict)) # True
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\firstmovefunc.PNG)
+
+![image](images\firstmovefunc.PNG)
 
 #### Example 2: This function returns an integer when you search for a pokemon with moves you would like it to know. For example you could search that Gloom knows Charm, Flash, Snore and it would return 3
     def has_pokemon_moves(p, move_list, move_dict):
@@ -61,7 +64,8 @@
     print(has_pokemon_moves("Pokemokee", ["charm", "flash", "snore"], move_dict)) # None
     print(has_pokemon_moves("Gloom", ["charm", "flash", "snore"], move_dict)) # 3
     print(has_pokemon_moves("Gloom", ["charm", "flash", "frizzle-frazzle"], move_dict)) # 2
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\secondmovefunc.PNG)
+
+![image](images\secondmovefunc.PNG)
 
 #### Example 3: This function returns lists of pokemon when you search for a move(s) you would like it to know. For example you could search Charm, Flash, Snore and it would return Gloom plus any other Pokemon that know the move
     def which_pokemon_have_moves(move_list, move_dict):
@@ -76,7 +80,8 @@
     Tests
     print(which_pokemon_have_moves(["charm", "flash", "snore", "aromatherapy"], move_dict)) #Vileplume, Petilil, Lilligant...
     print(which_pokemon_have_moves(["charm", "flash", "frizzle-frazzle"], move_dict)) #None
-![image](C:\Users\franc\OneDrive\Documents\HCI584X\PokemonDataScience_HCI_584_Francis\images\thirdmovefunc.PNG)
+
+![image](images\thirdmovefunc.PNG)
 
 ## Limitations
 #### There are a few limitations with the project. A lot of the limitations stem from the vast amount of inputs and variables that go into pokemon. Therefore the project works well for looking for specific cases, for example finding the fast legendary pokemon that is not a dragon type. The intention of the project was to create a one stop shop for anything a user would need to create a competitive pokemon team but there are some things missing like natures, items, and EVs/IVs.
