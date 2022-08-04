@@ -70,3 +70,6 @@
     Tests
     print(which_pokemon_have_moves(["charm", "flash", "snore", "aromatherapy"], move_dict)) #Vileplume, Petilil, Lilligant...
     print(which_pokemon_have_moves(["charm", "flash", "frizzle-frazzle"], move_dict)) #None
+
+## Limitations
+#### There are a few limitations with the project. A lot of the limitations stem from the vast amount of inputs and variables that go into pokemon. Therefore the project works well for looking for specific cases, for example finding the fast legendary pokemon that is not a dragon type. The intention of the project was to create a one stop shop for anything a user would need to create a competitive pokemon team but there are some things missing like natures, items, and EVs/IVs.
