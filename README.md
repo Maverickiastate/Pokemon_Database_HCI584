@@ -1,6 +1,9 @@
 # Pokemon DataScience project for HCI584
 
 ## Read me
+
+## This is a data science project focusing on some general descriptive summaries as well as some applied scenarios. The summaries look at some common ideas of Pokemon and see if they are indeed truthful. An example of this would be the first generation or game is the best one of the series. There could be many reasons why a person might make such statement, but based stat averages of Pokemon from each generation, that is not true in that sense. This project also follows along in a scernario where a competitive player might use this to start building a team in it's early stages. That being said, the usage of this could be wide depending on the part the user entends to use. The competitive parts may only be helpful to the niche group of players that play competitively. However the summaries stats based off certain criteria can be useful to any player. Maybe a player wants to know the strongest fire type, well using this tool they could find that. They could then go use that information in their single player campaign.
+
 ### Here are a few examples of some of the things one can do with the data in this project. 
 
 #### First user case scenario: Fastest fire type. 
@@ -22,8 +25,8 @@
     display(total_def[['pokedex_number','name', 'total_defense', 'hp', 'defense', 'sp_defense']].head(20))
     display(total_def.iloc[0])
 
-![image](images\Total_defense_sorted.PNG)
-![image](images\Total_defense_winner.PNG)
+![image](images/Total_defense_sorted.PNG)
+![image](images/Total_defense_winner.PNG)
 
 #### Third user case scenario: Using a move dictionary to find pokemon based off move data.
 #### Example 1: This function returns true/false when you search for a pokemon with moves you would like it to know. For example you could search that Gloom knows Charm, Flash, Snore and it would return True
@@ -43,7 +46,7 @@
     print(check_pokemon_moves("Gloom", ["charm", "flash", "snore"], move_dict)) # True
     print(check_pokemon_moves("Gloom", ["charm", "flash", "frizzle-frazzle"], move_dict)) # True
 
-![image](images\firstmovefunc.PNG)
+![image](images/firstmovefunc.PNG)
 
 #### Example 2: This function returns an integer when you search for a pokemon with moves you would like it to know. For example you could search that Gloom knows Charm, Flash, Snore and it would return 3
     def has_pokemon_moves(p, move_list, move_dict):
@@ -65,7 +68,7 @@
     print(has_pokemon_moves("Gloom", ["charm", "flash", "snore"], move_dict)) # 3
     print(has_pokemon_moves("Gloom", ["charm", "flash", "frizzle-frazzle"], move_dict)) # 2
 
-![image](images\secondmovefunc.PNG)
+![image](images/secondmovefunc.PNG)
 
 #### Example 3: This function returns lists of pokemon when you search for a move(s) you would like it to know. For example you could search Charm, Flash, Snore and it would return Gloom plus any other Pokemon that know the move
     def which_pokemon_have_moves(move_list, move_dict):
@@ -81,7 +84,7 @@
     print(which_pokemon_have_moves(["charm", "flash", "snore", "aromatherapy"], move_dict)) #Vileplume, Petilil, Lilligant...
     print(which_pokemon_have_moves(["charm", "flash", "frizzle-frazzle"], move_dict)) #None
 
-![image](images\thirdmovefunc.PNG)
+![image](images/thirdmovefunc.PNG)
 
 ## Limitations
 #### There are a few limitations with the project. A lot of the limitations stem from the vast amount of inputs and variables that go into pokemon. Therefore the project works well for looking for specific cases, for example finding the fast legendary pokemon that is not a dragon type. The intention of the project was to create a one stop shop for anything a user would need to create a competitive pokemon team but there are some things missing like natures, items, and EVs/IVs.
